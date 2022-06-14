@@ -65,12 +65,47 @@ red "Permission Denied!"
 exit 0
 fi
 
+if [ ! -f "/etc/afak.conf" ]; then
+ISP=`curl -sS ip-api.com | grep -w "isp" | awk '{print $3,$4,$5,$6,$7,$8,$9}' | cut -d'"' -f2 | cut -d',' -f1 | tee -a /etc/afak.conf`
+CITY=`curl -sS ip-api.com | grep -w "city" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
+WKT=`curl -sS ip-api.com | grep -w "timezone" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
+IPVPS=`curl -sS ip-api.com | grep -w "query" | awk '{print $3}' | cut -d'"' -f2 | tee -a /etc/afak.conf`
+else
+ISP=$(cat /etc/afak.conf | awk 'NR==1 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+CITY=$(cat /etc/afak.conf | awk 'NR==2 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+WKT=$(cat /etc/afak.conf | awk 'NR==3 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+IPVPS=$(cat /etc/afak.conf | awk 'NR==4 {print $1,$2,$3,$4,$5,$6,$7,$8}')
+fi
+
+cek=/home/shws
+if [[ -f "$cek" ]]; then
+sts="\033[1;32m◉ \033[0m"
+else
+sts="\033[1;31m○ \033[0m"
+fi
+
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "\E[44;1;39m                   • ABOUT US •                   \E[0m"
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo " • "
-echo " • "
+echo -e "
+   Isp Name : $ISP
+   City     : $CITY
+   Time     : $WKT
+   IPVPS    : $IPVPS
+   
+   \033[1;33mThis script by : SCVPN | t.me/anzclan\033[0m
+"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo ""
+echo " • Base Script BY           : SCVPS"
+echo " • Moded Script BY          : SCVPN"
+echo " • Project Name             : SCVPN PROJECT"
+echo " • Our Website              : www.dotycat.com"
+echo " • Contact Us               : t.me/DotyCat"
+echo " • Script Version           : V$(cat /opt/.ver) Latest Version"
+echo ""
 echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
-about
+clear
+menu
