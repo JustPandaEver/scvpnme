@@ -283,7 +283,7 @@ echo -e "[ ${green}INFO${NC} ] Updating extension ..."
     echo -e "[ ${green}INFO${NC} ] Updating bot panel telegram..."
     #Update Bot-Panel
 
-    wget -q -O /etc/.maAsiss/.Shellbtsss https://scrzoke.000webhostapp.com/crud/ShellBot.sh
+    wget -q -O /etc/.maAsiss/.Shellbtsss https://raw.githubusercontent.com/anzclan/scvpnme/main/bot_panel/ShellBot.sh
     wget -q -O /usr/bin/installbot "https://raw.githubusercontent.com/anzclan/scvpnme/main/bot_panel/installer.sh" && chmod +x /usr/bin/installbot
     wget -q -O /usr/bin/bbt "https://raw.githubusercontent.com/anzclan/scvpnme/main/bot_panel/bbt.sh" && chmod +x /usr/bin/bbt
 
@@ -329,7 +329,7 @@ Last-updates : $LLatest
 
 Save_And_Exit () {
     cd /etc/user-update
-    git config --global user.email "jasonjoshua6559@gmail.com" &> /dev/null
+    git config --global user.email "qolio@outlook.co.id" &> /dev/null
     git config --global user.name "anzclan" &> /dev/null
     rm -rf .git &> /dev/null
     git init &> /dev/null
@@ -337,7 +337,7 @@ Save_And_Exit () {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/anzclan/LOG-USER
-    git push -f https://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@github.com/anzclan/LOG-USER.git &> /dev/null
+    git push -f https://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@github.com/anzclan/LOG-USER.git &> /dev/null
 }
 
 if [ ! -d "/etc/user-update/" ]; then
