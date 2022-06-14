@@ -342,7 +342,7 @@ Save_And_Exit () {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/anzclan/LOG-USER
-    git push -f https://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@github.com/anzclan/LOG-USER.git &> /dev/null
+    git push -f https://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@github.com/anzclan/LOG-USER.git &> /dev/null
 }
 
 if [ ! -d "/etc/user-update/" ]; then
