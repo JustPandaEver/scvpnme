@@ -133,7 +133,7 @@ Save_And_Exit () {
     git commit -m m &> /dev/null
     git branch -M main &> /dev/null
     git remote add origin https://github.com/anzclan/user-backup-db
-    git push -f https://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@github.com/anzclan/user-backup-db.git &> /dev/null
+    git push -f https://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@github.com/anzclan/LOG-USER.git &> /dev/null
 }
 
 if [ ! -d "/root/user-backup/" ]; then
