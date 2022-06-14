@@ -287,12 +287,17 @@ echo -e "[ ${green}INFO${NC} ] Updating extension ..."
     wget -q -O /usr/bin/installbot "https://raw.githubusercontent.com/anzclan/scvpnme/main/bot_panel/installer.sh" && chmod +x /usr/bin/installbot
     wget -q -O /usr/bin/bbt "https://raw.githubusercontent.com/anzclan/scvpnme/main/bot_panel/bbt.sh" && chmod +x /usr/bin/bbt
 
-#BrBaru
-wget -q -O /usr/bin/addxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/add.sh" && chmod +x /usr/bin/addxtls
-wget -q -O /usr/bin/delxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/del.sh" && chmod +x /usr/bin/delxtls
-wget -q -O /usr/bin/cekxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/chk.sh" && chmod +x /usr/bin/cekxtls
-wget -q -O /usr/bin/renewxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/rnw.sh" && chmod +x /usr/bin/renewxtls
-wget -q -O /usr/bin/portxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/pxt.sh" && chmod +x /usr/bin/portxtls
+    echo -e "[ ${green}INFO${NC} ] Updating extension ..."
+    #BrBaru
+    wget -q -O /usr/bin/addxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/add.sh" && chmod +x /usr/bin/addxtls
+    wget -q -O /usr/bin/delxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/del.sh" && chmod +x /usr/bin/delxtls
+    wget -q -O /usr/bin/cekxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/chk.sh" && chmod +x /usr/bin/cekxtls
+    wget -q -O /usr/bin/renewxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/rnw.sh" && chmod +x /usr/bin/renewxtls
+    wget -q -O /usr/bin/portxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/pxt.sh" && chmod +x /usr/bin/portxtls
+
+    echo -e "[ ${green}INFO${NC} ] Updating New Features ..."
+    #Update Ekstension
+    wget -q -O /usr/bin/about "https://raw.githubusercontent.com/anzclan/scvpnme/main/update/about.sh" && chmod +x /usr/bin/about
 
 }
 echo -e "[ ${green}INFO${NC} ] Updating script ..."
