@@ -82,110 +82,102 @@ fi
 
 ssh=$(service ssh status | grep active | cut -d ' ' $stat)
 if [ "$ssh" = "active" ]; then
-ressh="${green}AKTIF${NC}"
+ressh="${green}ON${NC}"
 else
-ressh="${red}MATI${NC}"
+ressh="${red}OFF${NC}"
 fi
 sshstunel=$(service stunnel4 status | grep active | cut -d ' ' $stat)
 if [ "$sshstunel" = "active" ]; then
-resst="${green}AKTIF${NC}"
+resst="${green}ON${NC}"
 else
-resst="${red}MATI${NC}"
+resst="${red}OFF${NC}"
 fi
 wg=$(service wg-quick@wg0 status | grep active | cut -d ' ' $stat)
 if [ "$wg" = "active" ]; then
-reswg="${green}AKTIF${NC}"
+reswg="${green}ON${NC}"
 else
-reswg="${red}MATI${NC}"
+reswg="${red}OFF${NC}"
 fi
 l22tp=$(service xl2tpd status | grep active | cut -d ' ' $stat)
 if [ "$l22tp" = "active" ]; then
-resl2tp="${green}AKTIF${NC}"
+resl2tp="${green}ON${NC}"
 else
-resl2tp="${red}MATI${NC}"
+resl2tp="${red}OFF${NC}"
 fi
 pptp=$(service pptpd status | grep active | cut -d ' ' $stat)
 if [ "$pptp" = "active" ]; then
-respptp="${green}AKTIF${NC}"
+respptp="${green}ON${NC}"
 else
-respptp="${red}MATI${NC}"
+respptp="${red}OFF${NC}"
 fi
 sstp=$(service accel-ppp status | grep active | cut -d ' ' $stat)
 if [ "$sstp" = "active" ]; then
-resstp="${green}AKTIF${NC}"
+resstp="${green}ON${NC}"
 else
-resstp="${red}MATI${NC}"
+resstp="${red}OFF${NC}"
 fi
 ssr=$(service ssrmu status | grep active | cut -d ' ' $stat)
 if [ "$ssr" = "active" ]; then
-ressr="${green}AKTIF${NC}"
+ressr="${green}ON${NC}"
 else
-ressr="${red}MATI${NC}"
+ressr="${red}OFF${NC}"
 fi
 sodosok=$(service shadowsocks-libev status | grep active | cut -d ' ' $stat)
 if [ "$sodosok" = "active" ]; then
-resss="${green}AKTIF${NC}"
+resss="${green}ON${NC}"
 else
-resss="${red}MATI${NC}"
+resss="${red}OFF${NC}"
 fi
 v2r=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$v2r" = "active" ]; then
-resv2r="${green}AKTIF${NC}"
+resv2r="${green}ON${NC}"
 else
-resv2r="${red}MATI${NC}"
+resv2r="${red}OFF${NC}"
 fi
 vles=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$vles" = "active" ]; then
-resvles="${green}AKTIF${NC}"
+resvles="${green}ON${NC}"
 else
-resvles="${red}MATI${NC}"
+resvles="${red}OFF${NC}"
 fi
 trj=$(service $rekk status | grep active | cut -d ' ' $stat)
 if [ "$trj" = "active" ]; then
-restr="${green}AKTIF${NC}"
+restr="${green}ON${NC}"
 else
-restr="${red}MATI${NC}"
+restr="${red}OFF${NC}"
 fi
 trjgo=$(service trojan-go status | grep active | cut -d ' ' $stat)
 if [ "$trjgo" = "active" ]; then
-restrgo="${green}AKTIF${NC}"
+restrgo="${green}ON${NC}"
 else
-restrgo="${red}MATI${NC}"
+restrgo="${red}OFF${NC}"
 fi
-# systemctl enable ssh && systemctl restart ssh 
-# systemctl enable stunnel4 && systemctl restart stunnel4
-# systemctl enable wg-quick@wg0 && systemctl restart wg-quick@wg0
-# systemctl enable xl2tpd && systemctl restart xl2tpd
-# systemctl enable accel-ppp && systemctl restart accel-ppp
-# systemctl enable pptpd && systemctl restart pptpd
-# systemctl enable trojan-go && systemctl restart trojan-go
-# systemctl enable shadowsocks-libev && systemctl restart shadowsocks-libev
-# systemctl enable v2ray && systemctl restart v2ray
-# systemctl enable ssrmu && systemctl restart ssrmu
+
 
 clear
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
-echo -e "\E[44;1;39m      ⇱ Service ALL Status ⇲       \E[0m"
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\E[40;1;37m|               • SERVER STATUS •                |\E[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo -e "
-[ SSH & VPN ]             : $ressh
-[ STUNNEL ]               : $resst
-[ WIREGUARD ]             : $reswg
-[ L2TP ]                  : $resl2tp
-[ PPTP ]                  : $respptp
-[ SSTP ]                  : $resstp
-[ SSR ]                   : $ressr
-[ ShadowSocks]            : $resss"
+ • SSH & VPN                             : $ressh
+ • STUNNEL                               : $resst
+ • WIREGUARD                             : $reswg
+ • L2TP                                  : $resl2tp
+ • PPTP                                  : $respptp
+ • SSTP                                  : $resstp
+ • SSR                                   : $ressr
+ • ShadowSocks                           : $resss"
 if [ "$rekk" != "xray" ]; then
-echo -e "[ V2RAY ]                 : $resv2r"
+echo -e " • V2RAY                        : $resv2r"
 else
-echo -e "[ XRAY ]                  : $resv2r"
+echo -e " • XRAY                                  : $resv2r"
 fi
-echo -e "[ VLESS ]                 : $resvles
-[ TROJAN ]                : $restr
-[ TROJAN-GO ]             : $restrgo
+echo -e " • VLESS                                 : $resvles
+ • TROJAN                                : $restr
+ • TROJAN-GO                             : $restrgo
 "
-echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
+echo -e "\033[0;34m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
 echo ""
 read -n 1 -s -r -p "Press any key to back on menu"
 menu
