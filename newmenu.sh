@@ -107,11 +107,11 @@ echo -e "
  [\033[1;36m44\033[0m] • Server Status
  [\033[1;36m55\033[0m] • Trial Generator
  [\033[1;36m66\033[0m] • Logs User Created
- [\033[1;36m77\033[0m] • VPS Setting [ Menu ]
- [\033[1;36m88\033[0m] • Autokill Multi-login [ Menu ]
- [\033[1;36m99\033[0m] • ALL Information VPS[ Menu ]
+ [\033[1;36m77\033[0m] • VPS Setting             [ Menu ]
+ [\033[1;36m88\033[0m] • Autokill Multi-login    [ Menu ]
+ [\033[1;36m99\033[0m] • ALL Information VPS     [ Menu ]
 
- [\033[1;36m100\033[0m] • SYSTEM / Admin [ Menu ]
+ [\033[1;36m100\033[0m] • SYSTEM / Admin         [ Menu ]
  [\033[1;36m700\033[0m] • Bot-Panel $sts
 "
 if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
