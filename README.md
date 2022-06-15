@@ -1,6 +1,7 @@
 # FULL AUTO INSTALL
 
-Channel : https://t.me/anzclaan
+Channel    : https://t.me/dotycat
+REG IP VPS : https://t.me/anzclaan
 
 you need cloudflare domain pointing to your ip vps [important]
 
