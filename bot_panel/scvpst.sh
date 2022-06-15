@@ -1206,7 +1206,7 @@ EOF
         OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
 
         local env_msg
-        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>    🔸 LUKAVPN TRIAL 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
+        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>    🔸  TRIAL 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
         env_msg+="Username: <code>$userna</code>\n"
         env_msg+="Password: 1\n"
         env_msg+="Expired On: $t_time $hrs ⏳\n"
@@ -7461,7 +7461,7 @@ OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '
 wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
 local env_msg
-env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>    🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
+env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>    🔸  PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
 env_msg+="Username: <code>$userna</code>\n"
 env_msg+="Password: <code>$passw</code>\n"
 env_msg+="Expired On: $data 📅\n"
@@ -7856,7 +7856,7 @@ while :; do
                         OhpOVPN=`cat /root/log-install.txt | grep -w "OHP OpenVPN" | cut -d: -f2 | awk '{print $1}'`
                         wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
-                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>       🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
+                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>       🔸  PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
                         env_msg+="Username: <code>$(awk -F " " '/Name/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Password: <code>$(awk -F " " '/Password/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Expired On: $(awk -F " " '/Validity/ {print $2}' $CAD_ARQ) 🗓\n"
@@ -7897,7 +7897,7 @@ while :; do
                         wsssl=`cat /root/log-install.txt | grep -w "SSH SSL Websocket" | cut -d: -f2 | awk '{print $1}'`
 
                         local env_msg
-                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>       🔸 LUKAVPN PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
+                        env_msg="━━━━━━━━━━━━━━━━━━━━━\n<b>       🔸  PREMIUM ACCOUNT 🔸 </b>\n━━━━━━━━━━━━━━━━━━━━━\n"
                         env_msg+="Username: <code>$(awk -F " " '/Name/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Password: <code>$(awk -F " " '/Password/ {print $2}' $CAD_ARQ)</code>\n"
                         env_msg+="Expired On: $(awk -F " " '/Validity/ {print $2}' $CAD_ARQ) 🗓\n"
