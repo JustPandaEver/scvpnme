@@ -231,7 +231,6 @@ cat <<'mySiteOvpn' > /home/vps/public_html/index.html
 <meta name="theme-color" content="#000000" />
 </head><body>
 <style>
-</style>
 * {
 margin: 0;
 padding: 0;
@@ -450,7 +449,7 @@ header div {
 width: 81em;
 }
 }
-​
+</style>
 <header>
 <div>
 <a href="https://dotycat.com/">&larr; Back to Dotycat</a>
