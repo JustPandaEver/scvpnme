@@ -104,6 +104,7 @@ echo -e "
  [\033[1;36m06\033[0m] • L2TP / PPTP
  [\033[1;36m07\033[0m] • SHADOWSOCKS obfs/ssr
  
+ [\033[1;36m33\033[0m] • DNS Server
  [\033[1;36m44\033[0m] • Server Status
  [\033[1;36m55\033[0m] • Trial Generator
  [\033[1;36m66\033[0m] • Logs User Created
@@ -158,6 +159,8 @@ if [[ $(cat /opt/.ver) = $serverV ]] > /dev/null 2>&1; then
        ipsec-menu
     elif [[ $x -eq 7 ]]; then
        ss-menu
+    elif [[ $x -eq 33 ]]; then
+       menu-dns
     elif [[ $x -eq 44 ]]; then
        status
     elif [[ $x -eq 55 ]]; then
