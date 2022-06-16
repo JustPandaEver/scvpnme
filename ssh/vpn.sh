@@ -103,7 +103,7 @@ proto tcp
 # change scvpn.me to your own bug
 remote "scvpn.me"
 port 1194
-http-proxy $(cat /etc/$bec/domain) 6969
+http-proxy xxxxxxxxx 6969
 resolv-retry infinite
 route-method exe
 nobind
