@@ -294,8 +294,15 @@ echo -e "[ ${green}INFO${NC} ] Updating extension ..."
     wget -q -O /usr/bin/cekxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/chk.sh" && chmod +x /usr/bin/cekxtls
     wget -q -O /usr/bin/renewxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/rnw.sh" && chmod +x /usr/bin/renewxtls
     wget -q -O /usr/bin/portxtls "https://raw.githubusercontent.com/anzclan/scvpnme/main/xray/pxt.sh" && chmod +x /usr/bin/portxtls
+    
+    echo -e "[ ${green}INFO${NC} ] Updating Custom DNS Features ..."
+    #Update DNS
+    wget -q -O /usr/bin/check-dns "https://raw.githubusercontent.com/anzclan/dns/main/check-dns.sh" && chmod +x /usr/bin/check-dns 
+    wget -q -O /usr/bin/menu-dns "https://raw.githubusercontent.com/anzclan/dns/main/menu-dns.sh" && chmod +x /usr/bin/menu-dns 
+    wget -q -O /usr/bin/set-dns "https://raw.githubusercontent.com/anzclan/dns/main/set-dns.sh" && chmod +x /usr/bin/set-dns
+ 
 
-    echo -e "[ ${green}INFO${NC} ] Updating New Features ..."
+    echo -e "[ ${green}INFO${NC} ] Updating Other Features ..."
     #Update Ekstension
     wget -q -O /usr/bin/about "https://raw.githubusercontent.com/anzclan/scvpnme/main/update/about.sh" && chmod +x /usr/bin/about
 
